@@ -18,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         registerForPushNotifications(application)
         
+        // Check if launched from notification
+        // 1
+        if let notification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? [String: AnyObject] {
+            // 2
+            
+            //TODO: Open the app to the missed event
+            //let aps = notification["aps"] as! [String: AnyObject]
+            //createNewNewsItem(aps)
+            // 3
+            //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+        }
+        
         return true
     }
 
@@ -69,6 +81,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         print("Failed to register:", error)
+    }
+    
+    //Handle push notifications while the app is open
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        NSLog("Did Recieve Remote Notification")
+        let aps = userInfo["aps"] as! [String: AnyObject]
+        
+        // 1
+        if (aps["content-available"] as? NSString)?.integerValue == 1 {
+            // Refresh Podcast
+            // 2
+            //let podcastStore = PodcastStore.sharedStore
+            //podcastStore.refreshItems { didLoadNewItems in
+                // 3
+            //    completionHandler(didLoadNewItems ? .NewData : .NoData)
+            // }
+        } else  {
+            // News
+            // 4
+            //createNewNewsItem(aps)
+            //completionHandler(.NewData)
+        }
     }
 }
 
