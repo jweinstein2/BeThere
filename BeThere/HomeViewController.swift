@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var weekButtons: [UIButton]!
     @IBOutlet var dayEventTable : UITableView!
     
+    var selectedDay = 1
     let user = MainModel.user
     var events : [Event] = MainModel.events
 
@@ -46,8 +47,18 @@ class HomeViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func weekdayPressed(sender: UIButton) {
-        for button in weekButtons {
-            button.currentBackgroundImage?
+        let daysDict = [0 : "monday", 1 : "tuesday", 2 : "wednesday", 3 : "thursday", 4: "friday", 5 : "saturday", 6 : "sunday"]
+        
+        NSLog("weekday pressed")
+        for i in 0..<weekButtons.count {
+            var button = weekButtons[i]
+            if button == sender {
+                let imageName = "\(daysDict[i]!)_color"
+                sender.setImage(UIImage(named: imageName), forState: .Normal)
+            } else {
+                let imageName = "\(daysDict[i]!)_black"
+                button.setImage(UIImage(named: imageName), forState: .Normal)
+            }
         }
     }
     

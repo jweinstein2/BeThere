@@ -107,26 +107,44 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grg-kH-mCt" userLabel="Sunday">
                                                 <rect key="frame" x="49" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="tuesday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="FQe-4o-GOr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Am-oc-1yC" userLabel="Sunday">
                                                 <rect key="frame" x="98" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="wednesday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="SIj-kw-vEG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi3-vB-ysc" userLabel="Sunday">
                                                 <rect key="frame" x="147" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="thursday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="X1t-e0-abM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RA-Vw-sIJ" userLabel="Sunday">
                                                 <rect key="frame" x="196" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="friday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="In1-mR-qQ6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mds-hE-0Bo" userLabel="Sunday">
                                                 <rect key="frame" x="244" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="saturday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="iep-IF-SLw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV3-60-PEZ" userLabel="Sunday">
                                                 <rect key="frame" x="293" y="0.0" width="34" height="34"/>
                                                 <state key="normal" image="sunday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="KhQ-IX-7Ja"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -205,7 +223,7 @@
                                                             <color key="backgroundColor" red="1" green="0.23057361579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="20"/>
+                                                                    <integer key="value" value="15"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
@@ -244,13 +262,13 @@
                         <outlet property="donatedLabel" destination="XRr-gD-7K0" id="nLb-mh-rkC"/>
                         <outlet property="pointsLabel" destination="Owh-1D-KP9" id="S7m-25-29A"/>
                         <outlet property="streakLabel" destination="FEc-wK-IWd" id="wCS-dL-gWK"/>
-                        <outletCollection property="weekButtons" destination="vqQ-N2-pNR" id="H85-U1-Tbw"/>
-                        <outletCollection property="weekButtons" destination="grg-kH-mCt" id="9My-Oh-TcK"/>
-                        <outletCollection property="weekButtons" destination="5Am-oc-1yC" id="4GI-ad-mWg"/>
-                        <outletCollection property="weekButtons" destination="Wi3-vB-ysc" id="Ouq-nQ-Smo"/>
-                        <outletCollection property="weekButtons" destination="8RA-Vw-sIJ" id="LTP-8Y-1kb"/>
-                        <outletCollection property="weekButtons" destination="mds-hE-0Bo" id="hvG-x8-DMo"/>
-                        <outletCollection property="weekButtons" destination="UV3-60-PEZ" id="0pa-3I-pRE"/>
+                        <outletCollection property="weekButtons" destination="vqQ-N2-pNR" collectionClass="NSMutableArray" id="H85-U1-Tbw"/>
+                        <outletCollection property="weekButtons" destination="grg-kH-mCt" collectionClass="NSMutableArray" id="9My-Oh-TcK"/>
+                        <outletCollection property="weekButtons" destination="5Am-oc-1yC" collectionClass="NSMutableArray" id="4GI-ad-mWg"/>
+                        <outletCollection property="weekButtons" destination="Wi3-vB-ysc" collectionClass="NSMutableArray" id="Ouq-nQ-Smo"/>
+                        <outletCollection property="weekButtons" destination="8RA-Vw-sIJ" collectionClass="NSMutableArray" id="LTP-8Y-1kb"/>
+                        <outletCollection property="weekButtons" destination="mds-hE-0Bo" collectionClass="NSMutableArray" id="hvG-x8-DMo"/>
+                        <outletCollection property="weekButtons" destination="UV3-60-PEZ" collectionClass="NSMutableArray" id="0pa-3I-pRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpG-Jd-ucT" userLabel="First Responder" sceneMemberID="firstResponder"/>
