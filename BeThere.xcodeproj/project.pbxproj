@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		899A07F41D83BFC900F12C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A07F31D83BFC900F12C51 /* AppDelegate.swift */; };
+		899A07F61D83BFC900F12C51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A07F51D83BFC900F12C51 /* ViewController.swift */; };
+		899A07F91D83BFC900F12C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A07F71D83BFC900F12C51 /* Main.storyboard */; };
+		899A07FB1D83BFC900F12C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899A07FA1D83BFC900F12C51 /* Assets.xcassets */; };
+		899A07FE1D83BFC900F12C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A07FC1D83BFC900F12C51 /* LaunchScreen.storyboard */; };
+		899A08091D83BFC900F12C51 /* BeThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A08081D83BFC900F12C51 /* BeThereTests.swift */; };
+		899A08141D83BFC900F12C51 /* BeThereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A08131D83BFC900F12C51 /* BeThereUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		899A08051D83BFC900F12C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899A07E81D83BFC900F12C51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899A07EF1D83BFC900F12C51;
+			remoteInfo = BeThere;
+		};
+		899A08101D83BFC900F12C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899A07E81D83BFC900F12C51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899A07EF1D83BFC900F12C51;
+			remoteInfo = BeThere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		899A07F01D83BFC900F12C51 /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		899A07F31D83BFC900F12C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		899A07F51D83BFC900F12C51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		899A07F81D83BFC900F12C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		899A07FA1D83BFC900F12C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		899A07FD1D83BFC900F12C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		899A07FF1D83BFC900F12C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899A08041D83BFC900F12C51 /* BeThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		899A08081D83BFC900F12C51 /* BeThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereTests.swift; sourceTree = "<group>"; };
+		899A080A1D83BFC900F12C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899A080F1D83BFC900F12C51 /* BeThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		899A08131D83BFC900F12C51 /* BeThereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereUITests.swift; sourceTree = "<group>"; };
+		899A08151D83BFC900F12C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		899A07ED1D83BFC900F12C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A08011D83BFC900F12C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A080C1D83BFC900F12C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		899A07E71D83BFC900F12C51 = {
+			isa = PBXGroup;
+			children = (
+				899A07F21D83BFC900F12C51 /* BeThere */,
+				899A08071D83BFC900F12C51 /* BeThereTests */,
+				899A08121D83BFC900F12C51 /* BeThereUITests */,
+				899A07F11D83BFC900F12C51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		899A07F11D83BFC900F12C51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899A07F01D83BFC900F12C51 /* BeThere.app */,
+				899A08041D83BFC900F12C51 /* BeThereTests.xctest */,
+				899A080F1D83BFC900F12C51 /* BeThereUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899A07F21D83BFC900F12C51 /* BeThere */ = {
+			isa = PBXGroup;
+			children = (
+				899A07F31D83BFC900F12C51 /* AppDelegate.swift */,
+				899A07F51D83BFC900F12C51 /* ViewController.swift */,
+				899A07F71D83BFC900F12C51 /* Main.storyboard */,
+				899A07FA1D83BFC900F12C51 /* Assets.xcassets */,
+				899A07FC1D83BFC900F12C51 /* LaunchScreen.storyboard */,
+				899A07FF1D83BFC900F12C51 /* Info.plist */,
+			);
+			path = BeThere;
+			sourceTree = "<group>";
+		};
+		899A08071D83BFC900F12C51 /* BeThereTests */ = {
+			isa = PBXGroup;
+			children = (
+				899A08081D83BFC900F12C51 /* BeThereTests.swift */,
+				899A080A1D83BFC900F12C51 /* Info.plist */,
+			);
+			path = BeThereTests;
+			sourceTree = "<group>";
+		};
+		899A08121D83BFC900F12C51 /* BeThereUITests */ = {
+			isa = PBXGroup;
+			children = (
+				899A08131D83BFC900F12C51 /* BeThereUITests.swift */,
+				899A08151D83BFC900F12C51 /* Info.plist */,
+			);
+			path = BeThereUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		899A07EF1D83BFC900F12C51 /* BeThere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899A08181D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThere" */;
+			buildPhases = (
+				899A07EC1D83BFC900F12C51 /* Sources */,
+				899A07ED1D83BFC900F12C51 /* Frameworks */,
+				899A07EE1D83BFC900F12C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeThere;
+			productName = BeThere;
+			productReference = 899A07F01D83BFC900F12C51 /* BeThere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		899A08031D83BFC900F12C51 /* BeThereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899A081B1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereTests" */;
+			buildPhases = (
+				899A08001D83BFC900F12C51 /* Sources */,
+				899A08011D83BFC900F12C51 /* Frameworks */,
+				899A08021D83BFC900F12C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				899A08061D83BFC900F12C51 /* PBXTargetDependency */,
+			);
+			name = BeThereTests;
+			productName = BeThereTests;
+			productReference = 899A08041D83BFC900F12C51 /* BeThereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		899A080E1D83BFC900F12C51 /* BeThereUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899A081E1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereUITests" */;
+			buildPhases = (
+				899A080B1D83BFC900F12C51 /* Sources */,
+				899A080C1D83BFC900F12C51 /* Frameworks */,
+				899A080D1D83BFC900F12C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				899A08111D83BFC900F12C51 /* PBXTargetDependency */,
+			);
+			name = BeThereUITests;
+			productName = BeThereUITests;
+			productReference = 899A080F1D83BFC900F12C51 /* BeThereUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		899A07E81D83BFC900F12C51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jared Weinstein";
+				TargetAttributes = {
+					899A07EF1D83BFC900F12C51 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					899A08031D83BFC900F12C51 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 899A07EF1D83BFC900F12C51;
+					};
+					899A080E1D83BFC900F12C51 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 899A07EF1D83BFC900F12C51;
+					};
+				};
+			};
+			buildConfigurationList = 899A07EB1D83BFC900F12C51 /* Build configuration list for PBXProject "BeThere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 899A07E71D83BFC900F12C51;
+			productRefGroup = 899A07F11D83BFC900F12C51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				899A07EF1D83BFC900F12C51 /* BeThere */,
+				899A08031D83BFC900F12C51 /* BeThereTests */,
+				899A080E1D83BFC900F12C51 /* BeThereUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		899A07EE1D83BFC900F12C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A07FE1D83BFC900F12C51 /* LaunchScreen.storyboard in Resources */,
+				899A07FB1D83BFC900F12C51 /* Assets.xcassets in Resources */,
+				899A07F91D83BFC900F12C51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A08021D83BFC900F12C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A080D1D83BFC900F12C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		899A07EC1D83BFC900F12C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A07F61D83BFC900F12C51 /* ViewController.swift in Sources */,
+				899A07F41D83BFC900F12C51 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A08001D83BFC900F12C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A08091D83BFC900F12C51 /* BeThereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A080B1D83BFC900F12C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A08141D83BFC900F12C51 /* BeThereUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		899A08061D83BFC900F12C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 899A07EF1D83BFC900F12C51 /* BeThere */;
+			targetProxy = 899A08051D83BFC900F12C51 /* PBXContainerItemProxy */;
+		};
+		899A08111D83BFC900F12C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 899A07EF1D83BFC900F12C51 /* BeThere */;
+			targetProxy = 899A08101D83BFC900F12C51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		899A07F71D83BFC900F12C51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				899A07F81D83BFC900F12C51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		899A07FC1D83BFC900F12C51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				899A07FD1D83BFC900F12C51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		899A08161D83BFC900F12C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		899A08171D83BFC900F12C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		899A08191D83BFC900F12C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeThere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		899A081A1D83BFC900F12C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeThere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		899A081C1D83BFC900F12C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeThereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeThere.app/BeThere";
+			};
+			name = Debug;
+		};
+		899A081D1D83BFC900F12C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeThereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeThere.app/BeThere";
+			};
+			name = Release;
+		};
+		899A081F1D83BFC900F12C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeThereUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThereUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeThere;
+			};
+			name = Debug;
+		};
+		899A08201D83BFC900F12C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeThereUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredweinstein.BeThereUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeThere;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		899A07EB1D83BFC900F12C51 /* Build configuration list for PBXProject "BeThere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A08161D83BFC900F12C51 /* Debug */,
+				899A08171D83BFC900F12C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899A08181D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A08191D83BFC900F12C51 /* Debug */,
+				899A081A1D83BFC900F12C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		899A081B1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A081C1D83BFC900F12C51 /* Debug */,
+				899A081D1D83BFC900F12C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		899A081E1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A081F1D83BFC900F12C51 /* Debug */,
+				899A08201D83BFC900F12C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 899A07E81D83BFC900F12C51 /* Project object */;
+}
