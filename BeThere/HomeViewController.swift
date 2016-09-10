@@ -10,6 +10,9 @@ import UIKit
 
 class EventCell : UITableViewCell {
     
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
 }
 
 class HomeViewController: UIViewController {
@@ -30,6 +33,9 @@ class HomeViewController: UIViewController {
         pointsLabel.text = "\(user.points)"
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
+        
+        //TableViewCustomization
+        dayEventTable.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +64,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         let event = events[index]
         let cell = self.dayEventTable.dequeueReusableCellWithIdentifier("eventCell") as! EventCell
         //let proj = projectList[indexPath.row]
-        //cell.titleLabel.text = proj.title
-        //cell.locationEnabled = self.locationEnabled
-        cell.textLabel!.text = event.name
-        cell.detailTextLabel!.text = event.locationString
+        
+        cell.titleLabel.text = event.name
+        cell.locationLabel.text = event.locationString
+        cell.timeLabel.text = "11:35 AM" //TODO: Complete this correctly
         return cell
     }
     

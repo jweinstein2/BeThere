@@ -36,6 +36,7 @@ class Event {
     
     init(name: String, location: CLLocation, locationName: String, repeatData: [WeekDay : [NSDate]], endDate: NSDate?) {
         self.name = name
+        self.locationString = locationName
         self.location = location
         self.dayRepeat = repeatData
         self.endDate = endDate
