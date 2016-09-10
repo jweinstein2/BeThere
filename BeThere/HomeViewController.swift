@@ -8,10 +8,16 @@
 
 import UIKit
 
+class EventCell : UITableViewCell {
+    
+}
+
 class HomeViewController: UIViewController {
     @IBOutlet var streakLabel : UILabel!
     @IBOutlet var donatedLabel : UILabel!
     @IBOutlet var pointsLabel : UILabel!
+    
+    @IBOutlet var dayEventTable : UITableView!
     
     let user = MainModel.user
 
@@ -32,10 +38,40 @@ class HomeViewController: UIViewController {
     
     //MARK: Actions
     
-    
-    
-    //MARK: TableViewDelegate methods
 
 
+}
+
+//MARK: TableViewDelegate methods
+extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 2
+    }
+    
+    
+    func tableView(tableView: UITableView,
+                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = self.dayEventTable.dequeueReusableCellWithIdentifier("eventCell") as! EventCell
+        //let proj = projectList[indexPath.row]
+        //cell.titleLabel.text = proj.title
+        //cell.locationEnabled = self.locationEnabled
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyboard.instantiateViewControllerWithIdentifier("projectViewController") as! ProjectViewController
+        //vc.project = proj
+        //self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
 }
 
