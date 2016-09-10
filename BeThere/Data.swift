@@ -24,6 +24,7 @@ class Event {
     var id : String!
     var name : String!
     var location : CLLocation!
+    var locationString : String!
     var dayRepeat : [WeekDay : [NSDate]]!
     var endDate : NSDate?
     var reminder : Int? //number of minutes before start when reminder
@@ -33,7 +34,7 @@ class Event {
     var daysOnTime : Int = 0
     var daysLate : Int = 0
     
-    init(name: String, location: CLLocation, repeatData: [WeekDay : [NSDate]], endDate: NSDate?) {
+    init(name: String, location: CLLocation, locationName: String, repeatData: [WeekDay : [NSDate]], endDate: NSDate?) {
         self.name = name
         self.location = location
         self.dayRepeat = repeatData

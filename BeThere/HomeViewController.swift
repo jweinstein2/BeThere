@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var dayEventTable : UITableView!
     
     let user = MainModel.user
+    var events : [Event] = MainModel.events
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,28 +47,32 @@ class HomeViewController: UIViewController {
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 2
+        return events.count
     }
     
     
     func tableView(tableView: UITableView,
                    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        let index = indexPath.row
+        let event = events[index]
         let cell = self.dayEventTable.dequeueReusableCellWithIdentifier("eventCell") as! EventCell
         //let proj = projectList[indexPath.row]
         //cell.titleLabel.text = proj.title
         //cell.locationEnabled = self.locationEnabled
+        cell.textLabel!.text = event.name
+        cell.detailTextLabel!.text = event.locationString
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let row = indexPath.row
+        let event = events[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyboard.instantiateViewControllerWithIdentifier("projectViewController") as! ProjectViewController
-        //vc.project = proj
-        //self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("eventViewController") as! EventViewController
+        vc.event = event
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath: NSIndexPath) -> CGFloat {
