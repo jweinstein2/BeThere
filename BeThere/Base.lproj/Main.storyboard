@@ -210,13 +210,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPp-3M-h1x">
                                 <rect key="frame" x="20" y="591" width="335" height="68"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phw-lj-yUi">
-                                        <rect key="frame" x="8" y="14" width="40" height="40"/>
-                                        <state key="normal" backgroundImage="ic_settings"/>
-                                        <connections>
-                                            <segue destination="J5V-6f-Sln" kind="show" id="gHn-b3-h49"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aag-KW-fMC">
                                         <rect key="frame" x="147" y="14" width="40" height="40"/>
                                         <state key="normal" backgroundImage="ic_add"/>
@@ -226,6 +219,13 @@
                                         <state key="normal" backgroundImage="ic_user_round"/>
                                         <connections>
                                             <segue destination="UOf-W6-7bL" kind="show" id="OiV-Yr-V2x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phw-lj-yUi">
+                                        <rect key="frame" x="8" y="14" width="40" height="40"/>
+                                        <state key="normal" backgroundImage="ic_settings"/>
+                                        <connections>
+                                            <segue destination="J5V-6f-Sln" kind="show" id="gHn-b3-h49"/>
                                         </connections>
                                     </button>
                                 </subviews>
