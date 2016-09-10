@@ -97,27 +97,37 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="HKM-TW-buu">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="34"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="monday_black" translatesAutoresizingMaskIntoConstraints="NO" id="m8J-B2-JsV">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqQ-N2-pNR" userLabel="Sunday">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="tuesday_black" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-NS-OOc">
+                                                <state key="normal" image="monday_black"/>
+                                                <connections>
+                                                    <action selector="weekdayPressed:" destination="mFx-wa-YNy" eventType="touchUpInside" id="WUS-hk-GBG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grg-kH-mCt" userLabel="Sunday">
                                                 <rect key="frame" x="49" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="wednesday_black" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-Y6-n9p">
+                                                <state key="normal" image="tuesday_black"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Am-oc-1yC" userLabel="Sunday">
                                                 <rect key="frame" x="98" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="thursday_black" translatesAutoresizingMaskIntoConstraints="NO" id="LJL-Rz-Paa">
+                                                <state key="normal" image="wednesday_black"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi3-vB-ysc" userLabel="Sunday">
                                                 <rect key="frame" x="147" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="friday_black" translatesAutoresizingMaskIntoConstraints="NO" id="6Uw-md-4eq">
+                                                <state key="normal" image="thursday_black"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RA-Vw-sIJ" userLabel="Sunday">
                                                 <rect key="frame" x="196" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="saturday_black" translatesAutoresizingMaskIntoConstraints="NO" id="Uwr-z3-bQa">
+                                                <state key="normal" image="friday_black"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mds-hE-0Bo" userLabel="Sunday">
                                                 <rect key="frame" x="244" y="0.0" width="34" height="34"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="sunday_black" translatesAutoresizingMaskIntoConstraints="NO" id="Y0q-kz-qzo">
+                                                <state key="normal" image="saturday_black"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV3-60-PEZ" userLabel="Sunday">
                                                 <rect key="frame" x="293" y="0.0" width="34" height="34"/>
-                                            </imageView>
+                                                <state key="normal" image="sunday_black"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -139,6 +149,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phw-lj-yUi">
                                         <rect key="frame" x="8" y="14" width="40" height="40"/>
                                         <state key="normal" backgroundImage="ic_settings"/>
+                                        <connections>
+                                            <segue destination="J5V-6f-Sln" kind="show" id="gHn-b3-h49"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aag-KW-fMC">
                                         <rect key="frame" x="147" y="14" width="40" height="40"/>
@@ -147,6 +160,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qd-7d-L2i">
                                         <rect key="frame" x="287" y="14" width="40" height="40"/>
                                         <state key="normal" backgroundImage="ic_user_round"/>
+                                        <connections>
+                                            <segue destination="UOf-W6-7bL" kind="show" id="OiV-Yr-V2x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -194,6 +210,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.80324559563758391" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
@@ -227,19 +244,26 @@
                         <outlet property="donatedLabel" destination="XRr-gD-7K0" id="nLb-mh-rkC"/>
                         <outlet property="pointsLabel" destination="Owh-1D-KP9" id="S7m-25-29A"/>
                         <outlet property="streakLabel" destination="FEc-wK-IWd" id="wCS-dL-gWK"/>
+                        <outletCollection property="weekButtons" destination="vqQ-N2-pNR" id="H85-U1-Tbw"/>
+                        <outletCollection property="weekButtons" destination="grg-kH-mCt" id="9My-Oh-TcK"/>
+                        <outletCollection property="weekButtons" destination="5Am-oc-1yC" id="4GI-ad-mWg"/>
+                        <outletCollection property="weekButtons" destination="Wi3-vB-ysc" id="Ouq-nQ-Smo"/>
+                        <outletCollection property="weekButtons" destination="8RA-Vw-sIJ" id="LTP-8Y-1kb"/>
+                        <outletCollection property="weekButtons" destination="mds-hE-0Bo" id="hvG-x8-DMo"/>
+                        <outletCollection property="weekButtons" destination="UV3-60-PEZ" id="0pa-3I-pRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpG-Jd-ucT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-878.5" y="118.5"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--profileViewController-->
         <scene sceneID="qpW-5m-Kb3">
             <objects>
-                <viewControllerPlaceholder id="UOf-W6-7bL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Helpers" referencedIdentifier="profileViewController" id="UOf-W6-7bL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rz-Pa-Tfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-722.5" y="607"/>
+            <point key="canvasLocation" x="-758.5" y="617"/>
         </scene>
         <!--Peer Tutor-->
         <scene sceneID="Xun-SI-rSy">
@@ -376,6 +400,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24M-bB-UxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-407.5" y="118.5"/>
+        </scene>
+        <!--settingViewController-->
+        <scene sceneID="GQT-HU-jHb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Helpers" referencedIdentifier="settingViewController" id="J5V-6f-Sln" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYK-Zt-USY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="617"/>
         </scene>
     </scenes>
     <resources>

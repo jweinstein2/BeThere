@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var donatedLabel : UILabel!
     @IBOutlet var pointsLabel : UILabel!
     
+    @IBOutlet var weekButtons: [UIButton]!
     @IBOutlet var dayEventTable : UITableView!
     
     let user = MainModel.user
@@ -44,6 +45,11 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: Actions
+    @IBAction func weekdayPressed(sender: UIButton) {
+        for button in weekButtons {
+            button.currentBackgroundImage?
+        }
+    }
     
 
 
