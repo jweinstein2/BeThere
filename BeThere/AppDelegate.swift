@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 1
         if let notification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? [String: AnyObject] {
             // 2
-            
+            NSLog("Started from notification")
             //TODO: Open the app to the missed event
             //let aps = notification["aps"] as! [String: AnyObject]
             //createNewNewsItem(aps)
@@ -91,15 +91,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 1
         if (aps["content-available"] as? NSString)?.integerValue == 1 {
-            // Refresh Podcast
-            // 2
-            //let podcastStore = PodcastStore.sharedStore
-            //podcastStore.refreshItems { didLoadNewItems in
-                // 3
-            //    completionHandler(didLoadNewItems ? .NewData : .NoData)
-            // }
-            completionHandler(.NoData)
+            NSLog("silent refreshing in background")
+            
+            LocationUtil.sharedInstance.locationManager.requestLocation()
+            
+            //LocationUtil.sharedInstance.uploadNextLocation(){
+            LocationUtil.sharedInstance.backgroundFunction = {
+                NSLog("on loc update")
+                completionHandler(.NoData)
+            }
         } else  {
+            NSLog("normal refresh")
             // News
             // 4
             //createNewNewsItem(aps)

@@ -11,7 +11,7 @@ import UIKit
 import Charts
 
 class BarStatView: BarChartView{
-    var timeData : (onTime: Int, snoozed: Int, late: Int) = (3,4,5)
+    var timeData : (onTime: Int, snoozed: Int, late: Int) = (12,1,3)
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -34,18 +34,18 @@ class BarStatView: BarChartView{
         let data = BarChartData(xVals: titles, dataSet: dataset)
         self.data = data
         
-        self.leftAxis.drawLimitLinesBehindDataEnabled = true
+        //self.leftAxis.drawLimitLinesBehindDataEnabled = true
         self.leftAxis.enabled = false
         self.rightAxis.enabled = false
-        self.xAxis.enabled = false
+        //self.xAxis.enabled = false
         self.legend.enabled = false
         self.drawGridBackgroundEnabled = false
         self.drawBordersEnabled = false
         self.animate(yAxisDuration: 0.6)
         
         //Set axis min
-        self.leftAxis.axisMaxValue = 5.5
-        self.leftAxis.axisMinValue = 0.5
+        //self.leftAxis.axisMaxValue = 5.5
+        //self.leftAxis.axisMinValue = 0.5
         
         self.highlighter = nil
         

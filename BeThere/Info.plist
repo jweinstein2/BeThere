@@ -43,5 +43,7 @@
 	<string>This is to track how many events you make it to on time</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>blah blah blah</string>
+	<key>allowsBackgroundLocationUpdates</key>
+	<true/>
 </dict>
 </plist>

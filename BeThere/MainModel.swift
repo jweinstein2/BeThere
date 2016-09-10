@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import Alamofire
 
 class MainModel {
     static var user : User = MainModel.getUserInfo()
@@ -34,6 +35,26 @@ class MainModel {
     
     //TODO: Switch to async request call on login
     class func getEvents() -> [Event] {
+        Alamofire.request(.GET, "https://")
+            .responseJSON { response in
+                if response.result.isFailure {
+                    print("\(response.result.error!.description)")
+                    return
+                }
+                
+                if let resp = response.response, let json = (response.result.value) as? NSDictionary {
+                    NSLog(String(json))
+                    switch resp.statusCode {
+                    case 200:
+                        
+                        return
+                    case 400:
+                        return
+                    default:
+                        print("Get status code \(resp.statusCode)")
+                    }
+                }
+        }
         let loc  = CLLocation.init(latitude: 42.234, longitude: 102.4812)
         let event1 = Event(name: "Go to Bed", location: loc, locationName: "Home", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
         let event2 = Event(name: "Get To Class", location: loc, locationName: "WLH 140", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
