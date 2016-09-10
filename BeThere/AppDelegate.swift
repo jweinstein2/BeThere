@@ -97,11 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // 3
             //    completionHandler(didLoadNewItems ? .NewData : .NoData)
             // }
+            completionHandler(.NoData)
         } else  {
             // News
             // 4
             //createNewNewsItem(aps)
             //completionHandler(.NewData)
+            completionHandler(.NewData)
         }
     }
 }
