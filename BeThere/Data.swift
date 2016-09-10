@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import MapKit
 
-enum WeekDays {
+enum WeekDay {
     case Monday
     case Tuesday
     case Wednesday
@@ -20,6 +21,7 @@ enum WeekDays {
 
 
 class Event {
+    var id : String!
     var name : String!
     var location : CLLocation!
     var dayRepeat : [WeekDay : [NSDate]]!
@@ -34,7 +36,7 @@ class Event {
     init(name: String, location: CLLocation, repeatData: [WeekDay : [NSDate]], endDate: NSDate?) {
         self.name = name
         self.location = location
-        self.dayRepeat = dayRepeat
+        self.dayRepeat = repeatData
         self.endDate = endDate
     }
 }
@@ -42,7 +44,7 @@ class Event {
 class User {
     var name : String = "John Doe"
     var moneyDonated : Double = 0.0
-    var coins : Int = 0
+    var points : Int = 0
     var streak : Int = 0
     var daysOnTime : Int = 0
     var daysLate : Int = 0

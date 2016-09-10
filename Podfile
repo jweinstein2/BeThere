@@ -9,6 +9,7 @@ target 'BeThere' do
 pod 'Alamofire'
 pod 'Charts'
 pod 'Google/SignIn'
+pod 'CVCalendar'
 
   target 'BeThereTests' do
     inherit! :search_paths
