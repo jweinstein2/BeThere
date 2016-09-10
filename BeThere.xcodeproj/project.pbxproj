@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0374CDACBAD7AEA102482749 /* Pods_BeThereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436061EA80727A1BCC5D68D1 /* Pods_BeThereUITests.framework */; };
+		03C6034D67D91FDFEAC743E5 /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD904397FA2A1D21CC11BF8 /* Pods_BeThere.framework */; };
 		899A07F41D83BFC900F12C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A07F31D83BFC900F12C51 /* AppDelegate.swift */; };
 		899A07F61D83BFC900F12C51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A07F51D83BFC900F12C51 /* ViewController.swift */; };
 		899A07F91D83BFC900F12C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A07F71D83BFC900F12C51 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		899A07FE1D83BFC900F12C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A07FC1D83BFC900F12C51 /* LaunchScreen.storyboard */; };
 		899A08091D83BFC900F12C51 /* BeThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A08081D83BFC900F12C51 /* BeThereTests.swift */; };
 		899A08141D83BFC900F12C51 /* BeThereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A08131D83BFC900F12C51 /* BeThereUITests.swift */; };
+		FD5B4EA402B383F031E69A23 /* Pods_BeThereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D43BE5CCDA3511BC110465 /* Pods_BeThereTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1231314CE349ED9B5F62DB6C /* Pods-BeThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeThereTests/Pods-BeThereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1546BAEA845C552E7C1E9003 /* Pods-BeThereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThereTests/Pods-BeThereTests.release.xcconfig"; sourceTree = "<group>"; };
+		34D43BE5CCDA3511BC110465 /* Pods_BeThereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4EC84D603AA36BB7CC656A /* Pods-BeThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeThere/Pods-BeThere.debug.xcconfig"; sourceTree = "<group>"; };
+		436061EA80727A1BCC5D68D1 /* Pods_BeThereUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThereUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD904397FA2A1D21CC11BF8 /* Pods_BeThere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899A07F01D83BFC900F12C51 /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899A07F31D83BFC900F12C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899A07F51D83BFC900F12C51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		899A080F1D83BFC900F12C51 /* BeThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899A08131D83BFC900F12C51 /* BeThereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereUITests.swift; sourceTree = "<group>"; };
 		899A08151D83BFC900F12C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7681CD0A2EC9B6014EBF7F /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
+		A9D095A790857D29FB945397 /* Pods-BeThereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThereUITests/Pods-BeThereUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B08D8224DEF22ED4F54750F5 /* Pods-BeThereUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeThereUITests/Pods-BeThereUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C6034D67D91FDFEAC743E5 /* Pods_BeThere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5B4EA402B383F031E69A23 /* Pods_BeThereTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0374CDACBAD7AEA102482749 /* Pods_BeThereUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043E2BACF3894B61002D6271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DD904397FA2A1D21CC11BF8 /* Pods_BeThere.framework */,
+				34D43BE5CCDA3511BC110465 /* Pods_BeThereTests.framework */,
+				436061EA80727A1BCC5D68D1 /* Pods_BeThereUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73526B4714F9C45F4685BD17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4EC84D603AA36BB7CC656A /* Pods-BeThere.debug.xcconfig */,
+				9A7681CD0A2EC9B6014EBF7F /* Pods-BeThere.release.xcconfig */,
+				1231314CE349ED9B5F62DB6C /* Pods-BeThereTests.debug.xcconfig */,
+				1546BAEA845C552E7C1E9003 /* Pods-BeThereTests.release.xcconfig */,
+				B08D8224DEF22ED4F54750F5 /* Pods-BeThereUITests.debug.xcconfig */,
+				A9D095A790857D29FB945397 /* Pods-BeThereUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		899A07E71D83BFC900F12C51 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				899A08071D83BFC900F12C51 /* BeThereTests */,
 				899A08121D83BFC900F12C51 /* BeThereUITests */,
 				899A07F11D83BFC900F12C51 /* Products */,
+				73526B4714F9C45F4685BD17 /* Pods */,
+				043E2BACF3894B61002D6271 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899A08181D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThere" */;
 			buildPhases = (
+				4A00A314A820A6903D413217 /* 📦 Check Pods Manifest.lock */,
 				899A07EC1D83BFC900F12C51 /* Sources */,
 				899A07ED1D83BFC900F12C51 /* Frameworks */,
 				899A07EE1D83BFC900F12C51 /* Resources */,
+				FF1EA2203BD615665E222AD5 /* 📦 Embed Pods Frameworks */,
+				04DD5B25CAC5F29D14D2774A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899A081B1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereTests" */;
 			buildPhases = (
+				FA0A439DC4310D3FF6FB317D /* 📦 Check Pods Manifest.lock */,
 				899A08001D83BFC900F12C51 /* Sources */,
 				899A08011D83BFC900F12C51 /* Frameworks */,
 				899A08021D83BFC900F12C51 /* Resources */,
+				4E7B58197F9356D4F39FCADC /* 📦 Embed Pods Frameworks */,
+				DB4243EC59B3E9E9B1D7C00B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899A081E1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereUITests" */;
 			buildPhases = (
+				772304EFA3BD0BC30E2376FC /* 📦 Check Pods Manifest.lock */,
 				899A080B1D83BFC900F12C51 /* Sources */,
 				899A080C1D83BFC900F12C51 /* Frameworks */,
 				899A080D1D83BFC900F12C51 /* Resources */,
+				6A69A8A3C7A4BB58470484F7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +307,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04DD5B25CAC5F29D14D2774A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThere/Pods-BeThere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A00A314A820A6903D413217 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E7B58197F9356D4F39FCADC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThereTests/Pods-BeThereTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A69A8A3C7A4BB58470484F7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThereUITests/Pods-BeThereUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772304EFA3BD0BC30E2376FC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB4243EC59B3E9E9B1D7C00B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThereTests/Pods-BeThereTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0A439DC4310D3FF6FB317D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF1EA2203BD615665E222AD5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThere/Pods-BeThere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		899A07EC1D83BFC900F12C51 /* Sources */ = {
@@ -406,6 +577,7 @@
 		};
 		899A08191D83BFC900F12C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4EC84D603AA36BB7CC656A /* Pods-BeThere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeThere/Info.plist;
@@ -417,6 +589,7 @@
 		};
 		899A081A1D83BFC900F12C51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7681CD0A2EC9B6014EBF7F /* Pods-BeThere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeThere/Info.plist;
@@ -428,6 +601,7 @@
 		};
 		899A081C1D83BFC900F12C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1231314CE349ED9B5F62DB6C /* Pods-BeThereTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BeThereTests/Info.plist;
@@ -440,6 +614,7 @@
 		};
 		899A081D1D83BFC900F12C51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1546BAEA845C552E7C1E9003 /* Pods-BeThereTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BeThereTests/Info.plist;
@@ -452,6 +627,7 @@
 		};
 		899A081F1D83BFC900F12C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08D8224DEF22ED4F54750F5 /* Pods-BeThereUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BeThereUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -463,6 +639,7 @@
 		};
 		899A08201D83BFC900F12C51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9D095A790857D29FB945397 /* Pods-BeThereUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BeThereUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -491,6 +668,7 @@
 				899A081A1D83BFC900F12C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		899A081B1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +677,7 @@
 				899A081D1D83BFC900F12C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		899A081E1D83BFC900F12C51 /* Build configuration list for PBXNativeTarget "BeThereUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +686,7 @@
 				899A08201D83BFC900F12C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
