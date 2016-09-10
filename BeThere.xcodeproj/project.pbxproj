@@ -22,6 +22,7 @@
 		89B61FF21D848861002384C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FF11D848861002384C4 /* ProfileViewController.swift */; };
 		89B61FF41D848A18002384C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FF31D848A18002384C4 /* SettingViewController.swift */; };
 		89B61FF61D848A20002384C4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FF51D848A20002384C4 /* AddEventViewController.swift */; };
+		89B61FF81D849A5D002384C4 /* LocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FF71D849A5D002384C4 /* LocationUtil.swift */; };
 		89F4143B1D83EBA5003DFB19 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4143A1D83EBA5003DFB19 /* Data.swift */; };
 		89F4143D1D83F01D003DFB19 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4143C1D83F01D003DFB19 /* MainModel.swift */; };
 		FD5B4EA402B383F031E69A23 /* Pods_BeThereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D43BE5CCDA3511BC110465 /* Pods_BeThereTests.framework */; };
@@ -70,6 +71,7 @@
 		89B61FF11D848861002384C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89B61FF31D848A18002384C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		89B61FF51D848A20002384C4 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		89B61FF71D849A5D002384C4 /* LocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtil.swift; sourceTree = "<group>"; };
 		89F4143A1D83EBA5003DFB19 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		89F4143C1D83F01D003DFB19 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		9A7681CD0A2EC9B6014EBF7F /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				89B61FF51D848A20002384C4 /* AddEventViewController.swift */,
 				899A07F51D83BFC900F12C51 /* HomeViewController.swift */,
 				89B61FEA1D846B28002384C4 /* EventViewController.swift */,
+				89B61FF71D849A5D002384C4 /* LocationUtil.swift */,
 				89B61FEC1D847A0C002384C4 /* BarStats.swift */,
 				89F4143A1D83EBA5003DFB19 /* Data.swift */,
 				89F4143C1D83F01D003DFB19 /* MainModel.swift */,
@@ -471,6 +474,7 @@
 			files = (
 				89F4143D1D83F01D003DFB19 /* MainModel.swift in Sources */,
 				89B61FED1D847A0C002384C4 /* BarStats.swift in Sources */,
+				89B61FF81D849A5D002384C4 /* LocationUtil.swift in Sources */,
 				89B61FEB1D846B28002384C4 /* EventViewController.swift in Sources */,
 				89B61FF41D848A18002384C4 /* SettingViewController.swift in Sources */,
 				89F4143B1D83EBA5003DFB19 /* Data.swift in Sources */,
