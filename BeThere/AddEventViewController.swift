@@ -12,6 +12,8 @@ class AddEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let font = UIFont.systemFontOfSize(18)
 
         // Do any additional setup after loading the view.
     }

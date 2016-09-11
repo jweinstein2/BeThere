@@ -33,6 +33,7 @@ class BarStatView: BarChartView{
         let dataset = BarChartDataSet(yVals: dataEntries, label: "")
         let data = BarChartData(xVals: titles, dataSet: dataset)
         self.data = data
+        data.setDrawValues(false)
         
         //self.leftAxis.drawLimitLinesBehindDataEnabled = true
         self.leftAxis.enabled = false
@@ -43,6 +44,10 @@ class BarStatView: BarChartView{
         self.drawBordersEnabled = false
         self.animate(yAxisDuration: 0.6)
         
+        self.xAxis.labelFont = UIFont(name: "Avenir Next", size: 15)!
+        self.xAxis.labelPosition = .Bottom
+        self.xAxis.labelTextColor = UIColor.whiteColor()
+        
         //Set axis min
         //self.leftAxis.axisMaxValue = 5.5
         //self.leftAxis.axisMinValue = 0.5
@@ -51,8 +56,8 @@ class BarStatView: BarChartView{
         
         self.extraLeftOffset = 0
         self.extraRightOffset = 0
-        self.extraTopOffset = 0
-        self.extraBottomOffset = 0
+        self.extraTopOffset = 5
+        self.extraBottomOffset = 5
         self.descriptionText = ""
         self.minOffset = 0
         
