@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class AddEventViewController: UIViewController {
+class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     @IBAction func stepperValueChanged(sender: UIStepper) {
@@ -43,6 +43,12 @@ class AddEventViewController: UIViewController {
     @IBAction func cancelAddHabit(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
