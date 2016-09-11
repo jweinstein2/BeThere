@@ -18,7 +18,8 @@ class RepeatCell : UITableViewCell {
 
 class EventViewController: UIViewController {
     var event : Event!
-
+    var eventList : [Event] = [] //List of similar events
+    
     @IBOutlet weak var barChart: BarStatView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var repeatTable: UITableView!
@@ -37,6 +38,8 @@ class EventViewController: UIViewController {
         
         //TableViewCustomization
         repeatTable.tableFooterView = UIView()
+        
+        eventList = Utilities.eventsWithName(event.name)
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,19 +54,20 @@ class EventViewController: UIViewController {
 extension EventViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        return eventList.count
     }
     
     
     func tableView(tableView: UITableView,
                    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        //let index = indexPath.row
-        //let data = events[index]
+        let index = indexPath.row
+        let data = eventList[index]
         let cell = self.repeatTable.dequeueReusableCellWithIdentifier("repeatCell") as! RepeatCell
         
-        cell.timeLabel.text = "9:00 PM"
-        cell.dayLabel.text = "MON"
+        cell.timeLabel.text = data.startDate.timeOfDayString()
+        cell.dayLabel.text = data.startDate.shortDate()
+        cell.selectionStyle = .None
         return cell
     }
     

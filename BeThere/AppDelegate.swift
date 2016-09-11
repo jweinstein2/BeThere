@@ -101,12 +101,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 Alamofire.request(.POST, "https://still-sea-12039.herokuapp.com/event/\(id)/location?latitude=\(lastLocation.coordinate.latitude)&longitude=\(lastLocation.coordinate.longitude)")
                     .responseString() { string in
                         NSLog("RESPONSE : \(string.description)")
-                        if string.description == "true" {
+                        if string.description.containsString("true") {
                             self.displayAlert(title: "Guess what fucker.", message: "you made it on time")
-                        } else if string.description == "false" {
+                        } else if string.description.containsString("false") {
                             self.displayAlert(title: "Guess what fucker.", message: "you had one job and you fucked it up")
                         } else {
-                            NSLog("SOMETHING WENT VERY WRONG")
+                            self.displayAlert(title: "Guess what fucker.", message: "you had one job and you fucked it up")
                         }
                 }
             } else {

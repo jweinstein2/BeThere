@@ -96,7 +96,8 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = event.name
         cell.locationLabel.text = event.locationString
-        cell.timeLabel.text = event.startDate.timeOfDayString() //TODO: Complete this correctly
+        cell.timeLabel.text = event.startDate.timeOfDayStringN()
+        cell.selectionStyle = .None
         return cell
     }
     

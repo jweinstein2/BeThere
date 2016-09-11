@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AddEventViewController: UIViewController {
     @IBOutlet weak var valueLabel: UILabel!
@@ -33,9 +34,13 @@ class AddEventViewController: UIViewController {
     }
     
     @IBAction func addHabit(sender: AnyObject) {
+        //TODO: COMPLETE THIS CORRECTLY ALAMOFIRE REQUEST
+        let newEvent = Event(id: "1", name: "Fucker", location: CLLocation(latitude: 0,longitude: 0), locationName: "Homeroom", startDate: NSDate())
+        MainModel.events.append(newEvent)
     }
 
     @IBAction func cancelAddHabit(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     /*
     // MARK: - Navigation

@@ -27,12 +27,26 @@ extension NSDate {
     }
     
     //11:35 AM
-    func timeOfDayString() -> String {
+    func timeOfDayStringN() -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "h:mm \na"
         dateFormatter.AMSymbol = "AM"
         dateFormatter.PMSymbol = "PM"
         return dateFormatter.stringFromDate(self)
+    }
+    
+    func timeOfDayString() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.AMSymbol = "AM"
+        dateFormatter.PMSymbol = "PM"
+        return dateFormatter.stringFromDate(self)
+    }
+    
+    func shortDate() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EE"
+        return dateFormatter.stringFromDate(self).uppercaseString
     }
 }
 
