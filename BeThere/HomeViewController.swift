@@ -48,7 +48,6 @@ class HomeViewController: UIViewController {
     }
     
     func onEventsUpdated(notification: NSNotification) {
-        NSLog("THIS FUCKER")
         events = MainModel.events
         dayEventTable.reloadData()
     }
@@ -57,7 +56,6 @@ class HomeViewController: UIViewController {
     @IBAction func weekdayPressed(sender: UIButton) {
         let daysDict = [0 : "monday", 1 : "tuesday", 2 : "wednesday", 3 : "thursday", 4: "friday", 5 : "saturday", 6 : "sunday"]
         
-        NSLog("weekday pressed")
         for i in 0..<weekButtons.count {
             var button = weekButtons[i]
             if button == sender {

@@ -52,7 +52,7 @@ class LocationUtil: NSObject, CLLocationManagerDelegate {
         if (backgroundFunction != nil) {
             //Location updated in background make a server call
             
-            Alamofire.request(.POST, "/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
+            Alamofire.request(.POST, "https://still-sea-12039.herokuapp.com/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
                 .responseString() { string in
                     NSLog("RESPONSE : \(string.description)")
                     if string.description == "true" {

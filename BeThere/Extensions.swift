@@ -18,3 +18,12 @@ extension String {
         return date
     }
 }
+
+extension NSDate {
+    func currentDateInDayMonthYear() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd MM yyyy"
+        return dateFormatter.stringFromDate(self)
+    }
+}
+
