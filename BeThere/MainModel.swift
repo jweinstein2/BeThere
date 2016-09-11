@@ -51,18 +51,17 @@ class MainModel {
                             let recurringEventColor = event["recurring_event_color"] as! Int
                             let startTime = (event["start_time"] as! String).toDate()
                             let locationName = event["location_name"] as! String
-                            let locationDict = event["location"] as! NSDictionary
-                            let latitude = locationDict["latitude"] as! Double
-                            let longitude = locationDict["longitude"] as! Double
-                            let location = CLLocation(latitude: latitude, longitude: longitude)
+                            //let locationDict = event["location"] as! NSDictionary
+                            //let latitude = locationDict["latitude"] as! Double
+                            //let longitude = locationDict["longitude"] as! Double
+                            //let location = CLLocation(latitude: latitude, longitude: longitude)
                             
-                            let newEvent = Event(id: id, name: name, location: location, locationName: locationName, startDate: startTime!)
+                            let newEvent = Event(id: id, name: name, locationName: locationName, startDate: startTime!)
                             newEvent.color = recurringEventColor
                             
                             self.events.append(newEvent)
                             
                         }
-                        
                         return
                     case 400:
                         return

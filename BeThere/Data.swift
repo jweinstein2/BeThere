@@ -23,7 +23,7 @@ enum WeekDay {
 class Event {
     var id : String!
     var name : String!
-    var location : CLLocation!
+    //var location : CLLocation!
     var locationString : String!
     var startDate : NSDate
     //var endDate : NSDate?
@@ -35,11 +35,11 @@ class Event {
     var daysLate : Int = 0
     var color : Int = 0
     
-    init(id: String, name: String, location: CLLocation, locationName: String, startDate: NSDate) {
+    init(id: String, name: String, locationName: String, startDate: NSDate) {
         self.id = id
         self.name = name
         self.locationString = locationName
-        self.location = location
+        //self.location = location
         self.startDate = startDate
     }
 }

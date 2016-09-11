@@ -26,6 +26,7 @@
 		89B61FFA1D84DCB9002384C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FF91D84DCB9002384C4 /* Extensions.swift */; };
 		89B61FFC1D84FCA5002384C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FFB1D84FCA5002384C4 /* MapViewController.swift */; };
 		89B61FFE1D84FF68002384C4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FFD1D84FF68002384C4 /* Utilities.swift */; };
+		89B620001D851C5D002384C4 /* LineStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61FFF1D851C5D002384C4 /* LineStats.swift */; };
 		89F4143B1D83EBA5003DFB19 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4143A1D83EBA5003DFB19 /* Data.swift */; };
 		89F4143D1D83F01D003DFB19 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4143C1D83F01D003DFB19 /* MainModel.swift */; };
 		FD5B4EA402B383F031E69A23 /* Pods_BeThereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D43BE5CCDA3511BC110465 /* Pods_BeThereTests.framework */; };
@@ -78,6 +79,7 @@
 		89B61FF91D84DCB9002384C4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		89B61FFB1D84FCA5002384C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		89B61FFD1D84FF68002384C4 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		89B61FFF1D851C5D002384C4 /* LineStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStats.swift; sourceTree = "<group>"; };
 		89F4143A1D83EBA5003DFB19 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		89F4143C1D83F01D003DFB19 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		9A7681CD0A2EC9B6014EBF7F /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				89B61FEA1D846B28002384C4 /* EventViewController.swift */,
 				89B61FF71D849A5D002384C4 /* LocationUtil.swift */,
 				89B61FEC1D847A0C002384C4 /* BarStats.swift */,
+				89B61FFF1D851C5D002384C4 /* LineStats.swift */,
 				89F4143A1D83EBA5003DFB19 /* Data.swift */,
 				89F4143C1D83F01D003DFB19 /* MainModel.swift */,
 				89B61FF91D84DCB9002384C4 /* Extensions.swift */,
@@ -490,6 +493,7 @@
 				89F4143B1D83EBA5003DFB19 /* Data.swift in Sources */,
 				89B61FF21D848861002384C4 /* ProfileViewController.swift in Sources */,
 				89B61FFC1D84FCA5002384C4 /* MapViewController.swift in Sources */,
+				89B620001D851C5D002384C4 /* LineStats.swift in Sources */,
 				899A07F61D83BFC900F12C51 /* HomeViewController.swift in Sources */,
 				89B61FF61D848A20002384C4 /* AddEventViewController.swift in Sources */,
 				89B61FFA1D84DCB9002384C4 /* Extensions.swift in Sources */,
