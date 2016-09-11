@@ -102,11 +102,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     .responseString() { string in
                         NSLog("RESPONSE : \(string.description)")
                         if string.description.containsString("true") {
-                            self.displayAlert(title: "Guess what fucker.", message: "you made it on time")
+                            self.displayAlert(title: "Good Work", message: "You made it on time")
                         } else if string.description.containsString("false") {
-                            self.displayAlert(title: "Guess what fucker.", message: "you had one job and you fucked it up")
+                            self.displayAlert(title: "Event Missed", message: "Your multiplier has increased")
                         } else {
-                            self.displayAlert(title: "Guess what fucker.", message: "you had one job and you fucked it up")
+                            self.displayAlert(title: "Error", message: "you had one job and you fucked it up")
                         }
                 }
             } else {
