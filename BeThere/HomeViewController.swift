@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
                 let imageName = "\(daysDict[i]!)_color"
                 sender.setImage(UIImage(named: imageName), forState: .Normal)
             } else {
-                let imageName = "\(daysDict[i]!)_black"
+                let imageName = "\(daysDict[i]!)_white"
                 button.setImage(UIImage(named: imageName), forState: .Normal)
             }
         }

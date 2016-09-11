@@ -9,12 +9,16 @@
 import Foundation
 import CoreLocation
 import UIKit
+import Alamofire
 
 class LocationUtil: NSObject, CLLocationManagerDelegate {
     static let sharedInstance = LocationUtil()
     
     var lastLocation : CLLocation?
+    
     var backgroundFunction : (() -> ())?
+    var id : String?
+    
     var locationManager = CLLocationManager()
     
     func setup() {
@@ -47,11 +51,23 @@ class LocationUtil: NSObject, CLLocationManagerDelegate {
         NSLog("did update locations")
         if (backgroundFunction != nil) {
             //Location updated in background make a server call
+            
+            Alamofire.request(.POST, "/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
+                .responseString() { string in
+                    NSLog("RESPONSE : \(string.description)")
+                    if string.description == "true" {
+                        NSLog("You made it in time")
+                    } else if string.description == "false" {
+                        NSLog("You didn't make it in time")
+                    } else {
+                        NSLog("SOMETHING WENT VERY WRONG")
+                    }
+            }
+                
             backgroundFunction!()
+            id = nil
             backgroundFunction = nil
-            NSLog("SERVER CALL")
-        } else {
-            //Normal location update
+            
         }
     }
     

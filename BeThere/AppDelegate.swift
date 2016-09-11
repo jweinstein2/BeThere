@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         registerForPushNotifications(application)
@@ -33,29 +34,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
-
+    
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
     //MARK: Handling Push Notifications
     func registerForPushNotifications(application: UIApplication) {
         let notificationSettings = UIUserNotificationSettings(
@@ -91,23 +92,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 1
         if (aps["content-available"] as? NSString)?.integerValue == 1 {
-            NSLog("silent refreshing in background")
+            //Event Began
+            let id = userInfo["event_id"] as? String ?? "default"
             
-            LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
-            
-            //LocationUtil.sharedInstance.uploadNextLocation(){
-            LocationUtil.sharedInstance.backgroundFunction = {
-                NSLog("on loc update")
-                completionHandler(.NoData)
+            if UIApplication.sharedApplication().applicationState == .Active {
+                NSLog("Refresh in Foreground")
+                let lastLocation = LocationUtil.sharedInstance.lastLocation!
+                Alamofire.request(.POST, "/event/\(id)/location?latitude=\(lastLocation.coordinate.latitude)&longitude=\(lastLocation.coordinate.longitude)")
+                    .responseString() { string in
+                        NSLog("RESPONSE : \(string.description)")
+                        if string.description == "true" {
+                            self.displayAlert(title: "Guess what fucker.", message: "you made it on time")
+                        } else if string.description == "false" {
+                            self.displayAlert(title: "Guess what fucker.", message: "you had one job and you fucked it up")
+                        } else {
+                            NSLog("SOMETHING WENT VERY WRONG")
+                        }
+                }
+            } else {
+                NSLog("silent refreshing in background")
+                LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
+                
+                //LocationUtil.sharedInstance.uploadNextLocation(){
+                LocationUtil.sharedInstance.backgroundFunction = {
+                    NSLog("on loc update")
+                    completionHandler(.NoData)
+                }
             }
         } else  {
             NSLog("normal refresh")
-            // News
-            // 4
-            //createNewNewsItem(aps)
-            //completionHandler(.NewData)
-            completionHandler(.NewData)
+            // Event Missed or Completed
+            completionHandler(.NoData)
         }
+    }
+    
+    private func displayAlert(title title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        }
+        alertController.addAction(OKAction)
+        
+        let navController = UIApplication.sharedApplication().keyWindow?.rootViewController?.navigationController
+        navController?.presentViewController(alertController, animated: true) {}
     }
 }
 

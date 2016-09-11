@@ -42,9 +42,9 @@ class MainModel {
                 }
                 
                 if let resp = response.response, let jsonArray = (response.result.value) as? [NSDictionary] {
-                    NSLog(String(jsonArray))
                     switch resp.statusCode {
                     case 200:
+                        print(String(jsonArray))
                         for event in jsonArray {
                             let id = event["id"] as! String
                             let name = event["name"] as! String
