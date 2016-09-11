@@ -53,12 +53,15 @@ class LocationUtil: NSObject, CLLocationManagerDelegate {
             if (backgroundFunction != nil) {
                 //Location updated in background make a server call
                 
-                Alamofire.request(.POST, "\(Utilities.getURL())/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
+                let url = "\(Utilities.getURL())/event/\(id!)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)"
+                NSLog(url)
+                Alamofire.request(.POST, url)
                     .responseString() { string in
+                        
                         NSLog("RESPONSE : \(string.description)")
-                        if string.description == "true" {
+                        if string.description.containsString("true") {
                             NSLog("You made it in time")
-                        } else if string.description == "false" {
+                        } else if string.description.containsString("false") {
                             NSLog("You didn't make it in time")
                         } else {
                             NSLog("SOMETHING WENT VERY WRONG")

@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
     
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0;
         
         return true
     }
@@ -141,7 +142,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func displayAlert(title title: String, message: String) {
-        NSLog("=== displaying the fucking alert ===== ")
         alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
         }

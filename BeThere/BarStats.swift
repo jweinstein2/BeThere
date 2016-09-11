@@ -22,7 +22,8 @@ class BarStatView: BarChartView{
     private func layoutViews() {
         // Do any additional setup after loading the view.
         let titles = ["On Time", "Snoozed", "Late"]
-        let graphData = [timeData.onTime, timeData.snoozed, timeData.late]
+        //let graphData = [timeData.onTime, timeData.snoozed, timeData.late]
+        let graphData = [Int(arc4random() % 20) + 10, Int(arc4random() % 10), Int(arc4random() % 10)]
         
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<titles.count {

@@ -23,8 +23,15 @@ class LineStatView: LineChartView {
     
     private func layoutViews() {
         // Do any additional setup after loading the view.
-        let titles = ["", "", ""]
-        let graphData = [1, 1, 3]
+        var titles = [""]
+        var graphData = [0]
+        
+        var sum = 0
+        for i in 1...200 {
+            titles.append("")
+            graphData.append(sum)
+            sum += Int(arc4random()) % Int(20 / Int((i / 20) + 1)) + 3
+        }
         
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<titles.count {
@@ -33,6 +40,8 @@ class LineStatView: LineChartView {
         }
         
         let chartDataSet = LineChartDataSet(yVals: dataEntries, label: nil)
+        chartDataSet.lineWidth = 0.2
+        chartDataSet.highlightLineWidth = 0.2
         let chartData = LineChartData(xVals: graphData, dataSets: [chartDataSet])
         self.data = chartData
         data?.setDrawValues(false)
@@ -55,6 +64,8 @@ class LineStatView: LineChartView {
         //self.leftAxis.axisMinValue = 0.5
         
         self.highlighter = nil
+        
+        
         
         self.extraLeftOffset = 0
         self.extraRightOffset = 0

@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 
 class MainModel {
-    static var user : User = MainModel.getUserInfo()
+    static var user = MainModel.getUserInfo()
     static var events : [Event] = [] {
         didSet{
             NSNotificationCenter.defaultCenter().postNotificationName("eventsUpdated", object: nil)
@@ -34,6 +34,11 @@ class MainModel {
     
     //TODO: Switch to async request call on login
     class func loadEvents() {
+        NSLog(String(UIApplication.sharedApplication().applicationState))
+        if UIApplication.sharedApplication().applicationState == .Background {
+            return
+        }
+        
         Alamofire.request(.GET, "\(Utilities.getURL())/events")
             .responseJSON { response in
                 if response.result.isFailure {
@@ -46,6 +51,10 @@ class MainModel {
                     case 200:
                         print(String(jsonArray))
                         for event in jsonArray {
+                            if UIApplication.sharedApplication().applicationState == .Background {
+                                return
+                            }
+
                             let id = event["id"] as! String
                             let name = event["name"] as! String
                             let recurringEventColor = event["recurring_event_color"] as! Int

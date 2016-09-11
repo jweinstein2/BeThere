@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
         streakLabel.text = "\(user.streak)"
         donatedLabel.text = "$\(user.moneyDonated)"
         pointsLabel.text = "\(user.points)"
