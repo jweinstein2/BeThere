@@ -25,5 +25,14 @@ extension NSDate {
         dateFormatter.dateFormat = "dd MM yyyy"
         return dateFormatter.stringFromDate(self)
     }
+    
+    //11:35 AM
+    func timeOfDayString() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "h:mm \na"
+        dateFormatter.AMSymbol = "AM"
+        dateFormatter.PMSymbol = "PM"
+        return dateFormatter.stringFromDate(self)
+    }
 }
 
