@@ -225,9 +225,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="GlR-iI-4uE"/>
-                                </connections>
                             </button>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exV-ji-Iku">
                                 <rect key="frame" x="20" y="157" width="335" height="148"/>

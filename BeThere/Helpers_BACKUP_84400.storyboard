@@ -225,9 +225,12 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+<<<<<<< HEAD
+=======
                                 <connections>
                                     <action selector="addHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="GlR-iI-4uE"/>
                                 </connections>
+>>>>>>> 58ec3a6703aab7ae7d90881bf919ede3919d48a6
                             </button>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exV-ji-Iku">
                                 <rect key="frame" x="20" y="157" width="335" height="148"/>
@@ -262,6 +265,12 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="cancelAddHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="0F2-os-KYZ"/>
+                                </connections>
+>>>>>>> 58ec3a6703aab7ae7d90881bf919ede3919d48a6
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
