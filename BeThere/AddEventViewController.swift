@@ -9,9 +9,18 @@
 import UIKit
 
 class AddEventViewController: UIViewController {
-
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBAction func stepperValueChanged(sender: UIStepper) {
+        valueLabel.text = Int(sender.value).description
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stepper.wraps = true
+        stepper.autorepeat = true
+        stepper.maximumValue = 30
         
         let font = UIFont.systemFontOfSize(18)
 
