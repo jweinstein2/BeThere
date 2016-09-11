@@ -37,6 +37,7 @@ class AddEventViewController: UIViewController {
         //TODO: COMPLETE THIS CORRECTLY ALAMOFIRE REQUEST
         let newEvent = Event(id: "1", name: "Test", locationName: "Homeroom", startDate: NSDate())
         MainModel.events.append(newEvent)
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     @IBAction func cancelAddHabit(sender: AnyObject) {

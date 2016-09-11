@@ -115,13 +115,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             } else {
                 NSLog("silent refreshing in background")
-                LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
-                
                 //LocationUtil.sharedInstance.uploadNextLocation(){
                 LocationUtil.sharedInstance.backgroundFunction = {
                     NSLog("on loc update")
                     completionHandler(.NoData)
                 }
+                LocationUtil.sharedInstance.id = id
+                
+                LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
             }
             completionHandler(.NoData)
         } else  {

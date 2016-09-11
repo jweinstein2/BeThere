@@ -64,7 +64,7 @@
                                 <rect key="frame" x="20" y="260" width="335" height="120"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-2W-hG4" customClass="BarStatView" customModule="BeThere" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-2W-hG4" customClass="LineStatView" customModule="BeThere" customModuleProvider="target">
                                 <rect key="frame" x="20" y="400" width="335" height="120"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -316,7 +316,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="GlR-iI-4uE"/>
+                                    <action selector="addHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="aqQ-DG-OT9"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exV-ji-Iku">
@@ -352,6 +352,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelAddHabit:" destination="cOv-2q-Msr" eventType="touchUpInside" id="3fJ-16-Hep"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vn-aEj">
                                 <rect key="frame" x="30" y="95" width="75" height="30"/>
