@@ -36,6 +36,8 @@ class HomeViewController: UIViewController {
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.onEventsUpdated(_:)), name: "eventsUpdated", object: nil)
+        
         //TableViewCustomization
         dayEventTable.tableFooterView = UIView()
     }
@@ -43,6 +45,12 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func onEventsUpdated(notification: NSNotification) {
+        NSLog("THIS FUCKER")
+        events = MainModel.events
+        dayEventTable.reloadData()
     }
     
     //MARK: Actions
