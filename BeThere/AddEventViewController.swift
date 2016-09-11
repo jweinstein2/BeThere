@@ -32,7 +32,11 @@ class AddEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addHabit(sender: AnyObject) {
+    }
 
+    @IBAction func cancelAddHabit(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 
