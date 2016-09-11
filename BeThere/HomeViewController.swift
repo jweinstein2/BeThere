@@ -24,9 +24,10 @@ class HomeViewController: UIViewController {
     @IBOutlet var weekButtons: [UIButton]!
     @IBOutlet var dayEventTable : UITableView!
     
+    @IBOutlet weak var beeBackground: UIImageView!
     var selectedDay = 1
     let user = MainModel.user
-    var events : [Event] = MainModel.events
+    var events : [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +45,21 @@ class HomeViewController: UIViewController {
         //TableViewCustomization
         dayEventTable.tableFooterView = UIView()
         
+        if events.count == 0 {
+            beeBackground.hidden = false
+        } else {
+            beeBackground.hidden = true
+        }
+
+        
         weekdayPressed(weekButtons[0])
-        //TODO: Figure out what the button is for today
+        
+        if events.count == 0 {
+            beeBackground.hidden = false
+        } else {
+            beeBackground.hidden = true
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
