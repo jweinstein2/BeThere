@@ -31,7 +31,8 @@ class EventViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         locationLabel.text = "\(event.locationString)"
-        donatedLabel.text = "$\(event.moneyDonated)"
+        let donatedString = NSUserDefaults.standardUserDefaults().objectForKey("donated") as? String
+        donatedLabel.text = donatedString ?? "$0.00"
         streakLabel.text = "\(event.streak)"
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
@@ -40,6 +41,13 @@ class EventViewController: UIViewController {
         repeatTable.tableFooterView = UIView()
         
         eventList = Utilities.eventsWithName(event.name)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let donatedString = NSUserDefaults.standardUserDefaults().objectForKey("donated") as? String
+        donatedLabel.text = donatedString ?? "$0.00"
     }
     
     override func didReceiveMemoryWarning() {

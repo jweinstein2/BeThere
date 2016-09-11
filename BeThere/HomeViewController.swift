@@ -24,16 +24,18 @@ class HomeViewController: UIViewController {
     @IBOutlet var weekButtons: [UIButton]!
     @IBOutlet var dayEventTable : UITableView!
     
+    @IBOutlet weak var beeBackground: UIImageView!
     var selectedDay = 1
     let user = MainModel.user
-    var events : [Event] = MainModel.events
+    var events : [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         streakLabel.text = "\(user.streak)"
-        donatedLabel.text = "$\(user.moneyDonated)"
+        let donatedString = NSUserDefaults.standardUserDefaults().objectForKey("donated") as? String
+        donatedLabel.text = donatedString ?? "$0.00"
         pointsLabel.text = "\(user.points)"
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
@@ -43,8 +45,21 @@ class HomeViewController: UIViewController {
         //TableViewCustomization
         dayEventTable.tableFooterView = UIView()
         
+        if events.count == 0 {
+            beeBackground.hidden = false
+        } else {
+            beeBackground.hidden = true
+        }
+
+        
         weekdayPressed(weekButtons[0])
-        //TODO: Figure out what the button is for today
+        
+        if events.count == 0 {
+            beeBackground.hidden = false
+        } else {
+            beeBackground.hidden = true
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,9 +73,11 @@ class HomeViewController: UIViewController {
                 }
                 
                 if let resp = response.response, let jsonArray = (response.result.value) as? NSDictionary {
+                    NSLog(String(response))
                     switch resp.statusCode {
                     case 200:
                         let donatedString = jsonArray["donated"] as? String
+                        NSUserDefaults.standardUserDefaults().setObject(donatedString, forKey: "donated")
                         dispatch_async(dispatch_get_main_queue()) {
                             self.donatedLabel.text = donatedString
                         }

@@ -39,6 +39,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 2" translatesAutoresizingMaskIntoConstraints="NO" id="8Uv-SM-VHx">
+                                <rect key="frame" x="142" y="288.5" width="91" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7W2-aB-iPd"/>
+                                    <constraint firstAttribute="width" constant="91" id="isw-Nb-Lir"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-YO-OUH">
                                 <rect key="frame" x="20" y="72" width="335" height="76"/>
                                 <subviews>
@@ -78,6 +85,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$32.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2I-mv-fy8">
+                                        <rect key="frame" x="94" y="8" width="147" height="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="27"/>
+                                        <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -109,12 +122,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DONATED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-Y0-nWv">
                                 <rect key="frame" x="143" y="117" width="90" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$32.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2I-mv-fy8">
-                                <rect key="frame" x="146" y="79" width="84" height="37"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -306,7 +313,9 @@
                         <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BgU-YO-OUH" firstAttribute="top" secondItem="hOK-3D-ed3" secondAttribute="bottom" constant="8" id="O46-1m-aqK"/>
+                            <constraint firstItem="8Uv-SM-VHx" firstAttribute="centerX" secondItem="YkP-fU-8v7" secondAttribute="centerX" id="Ohd-bE-KUU"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BgU-YO-OUH" secondAttribute="leading" id="Rw9-Xe-EIp"/>
+                            <constraint firstItem="8Uv-SM-VHx" firstAttribute="centerY" secondItem="YkP-fU-8v7" secondAttribute="centerY" id="XPk-tX-3BC"/>
                             <constraint firstItem="xCc-fQ-mpC" firstAttribute="leading" secondItem="BgU-YO-OUH" secondAttribute="trailing" constant="-335" id="gfb-JT-0MR"/>
                             <constraint firstItem="xCc-fQ-mpC" firstAttribute="centerX" secondItem="BgU-YO-OUH" secondAttribute="centerX" id="qju-Fk-Thq"/>
                             <constraint firstItem="xCc-fQ-mpC" firstAttribute="top" secondItem="BgU-YO-OUH" secondAttribute="bottom" constant="8" id="ueI-7N-seb"/>
@@ -315,8 +324,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="BeThere" id="1S2-AM-w2Y"/>
                     <connections>
+                        <outlet property="beeBackground" destination="8Uv-SM-VHx" id="wbk-W5-Kmh"/>
                         <outlet property="dayEventTable" destination="rpd-x4-bLW" id="egF-k4-0tZ"/>
-                        <outlet property="donatedLabel" destination="XRr-gD-7K0" id="nLb-mh-rkC"/>
+                        <outlet property="donatedLabel" destination="j2I-mv-fy8" id="qht-dG-IS2"/>
                         <outlet property="pointsLabel" destination="Owh-1D-KP9" id="S7m-25-29A"/>
                         <outlet property="streakLabel" destination="FEc-wK-IWd" id="wCS-dL-gWK"/>
                         <outletCollection property="weekButtons" destination="vqQ-N2-pNR" collectionClass="NSMutableArray" id="H85-U1-Tbw"/>
@@ -397,7 +407,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOX-pD-TAE">
-                                <rect key="frame" x="141" y="440" width="70" height="37"/>
+                                <rect key="frame" x="120" y="440" width="113" height="37"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -482,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24M-bB-UxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-435.5" y="118.5"/>
+            <point key="canvasLocation" x="-291.5" y="118.5"/>
         </scene>
         <!--settingViewController-->
         <scene sceneID="GQT-HU-jHb">
@@ -494,6 +504,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background 2" width="150" height="150"/>
         <image name="friday_white" width="34" height="34"/>
         <image name="ic_plus" width="174" height="174"/>
         <image name="ic_settings1" width="171" height="171"/>
