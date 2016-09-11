@@ -43,6 +43,13 @@ class EventViewController: UIViewController {
         eventList = Utilities.eventsWithName(event.name)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let donatedString = NSUserDefaults.standardUserDefaults().objectForKey("donated") as? String
+        donatedLabel.text = donatedString ?? "$0.00"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

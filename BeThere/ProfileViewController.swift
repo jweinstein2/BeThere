@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet var donatedLabel : UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,13 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let donatedString = NSUserDefaults.standardUserDefaults().objectForKey("donated") as? String
+        donatedLabel.text = donatedString ?? "$0.00"
     }
     
 
