@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
         donatedLabel.text = "$\(user.moneyDonated)"
         pointsLabel.text = "\(user.points)"
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont(name: "avenir", size: 21)!]
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.onEventsUpdated(_:)), name: "eventsUpdated", object: nil)
         
