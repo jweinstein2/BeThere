@@ -44,7 +44,9 @@ extension NSDate {
     }
     
     func shortDate() -> String {
-        return "MON"
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EE"
+        return dateFormatter.stringFromDate(self).uppercaseString
     }
 }
 
