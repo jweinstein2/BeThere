@@ -15,6 +15,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
     @IBAction func stepperValueChanged(sender: UIStepper) {
         valueLabel.text = Int(sender.value).description
     }
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class AddEventViewController: UIViewController, UITextFieldDelegate {
         stepper.maximumValue = 30
         
         let font = UIFont.systemFontOfSize(18)
+        
+        datePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
 
         // Do any additional setup after loading the view.
     }
