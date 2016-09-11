@@ -12,6 +12,8 @@ import Alamofire
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var alertController : UIAlertController?
+    
     var window: UIWindow?
     
     
@@ -31,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // 3
             //(window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
+    
         
         return true
     }
@@ -106,34 +109,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         } else if string.description.containsString("false") {
                             self.displayAlert(title: "Event Missed", message: "Your multiplier has increased")
                         } else {
-                            self.displayAlert(title: "Error", message: "you had one job and you fucked it up")
+                            NSLog("DISPLAY ALERT")
+                            self.displayAlert(title: "Error", message: "you had one job and you messed it up")
                         }
                 }
             } else {
                 NSLog("silent refreshing in background")
-                LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
-                
                 //LocationUtil.sharedInstance.uploadNextLocation(){
                 LocationUtil.sharedInstance.backgroundFunction = {
                     NSLog("on loc update")
                     completionHandler(.NoData)
                 }
+                LocationUtil.sharedInstance.id = id
+                
+                LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
             }
+            completionHandler(.NoData)
         } else  {
             NSLog("normal refresh")
+            
+            if UIApplication.sharedApplication().applicationState == .Active {
+                NSLog("ALERT")
+                displayAlert(title: "title", message: aps["alert"] as! String)
+            } else {
+                
+            }
+            
             // Event Missed or Completed
             completionHandler(.NoData)
         }
     }
     
-    private func displayAlert(title title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    func displayAlert(title title: String, message: String) {
+        NSLog("=== displaying the fucking alert ===== ")
+        alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
         }
-        alertController.addAction(OKAction)
+        alertController!.addAction(OKAction)
         
-        let navController = UIApplication.sharedApplication().keyWindow?.rootViewController?.navigationController
-        navController?.presentViewController(alertController, animated: true) {}
+        self.window?.rootViewController?.presentViewController(alertController!, animated: true, completion: nil)
     }
 }
 

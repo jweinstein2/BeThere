@@ -40,33 +40,36 @@ class LocationUtil: NSObject, CLLocationManagerDelegate {
                          didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
         if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
             // ...
         }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        lastLocation = locations.first
-        
-        NSLog("did update locations")
-        if (backgroundFunction != nil) {
-            //Location updated in background make a server call
+        if locations.first != nil {
+            lastLocation = locations.first
             
-            Alamofire.request(.POST, "\(Utilities.getURL())/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
-                .responseString() { string in
-                    NSLog("RESPONSE : \(string.description)")
-                    if string.description == "true" {
-                        NSLog("You made it in time")
-                    } else if string.description == "false" {
-                        NSLog("You didn't make it in time")
-                    } else {
-                        NSLog("SOMETHING WENT VERY WRONG")
-                    }
-            }
+            NSLog("update locations")
+            if (backgroundFunction != nil) {
+                //Location updated in background make a server call
                 
-            backgroundFunction!()
-            id = nil
-            backgroundFunction = nil
+                Alamofire.request(.POST, "\(Utilities.getURL())/event/\(id)/location?latitude=\(lastLocation!.coordinate.latitude)&longitude=\(lastLocation!.coordinate.longitude)")
+                    .responseString() { string in
+                        NSLog("RESPONSE : \(string.description)")
+                        if string.description == "true" {
+                            NSLog("You made it in time")
+                        } else if string.description == "false" {
+                            NSLog("You didn't make it in time")
+                        } else {
+                            NSLog("SOMETHING WENT VERY WRONG")
+                        }
+                }
+                
+                backgroundFunction!()
+                id = nil
+                backgroundFunction = nil
+                
+            }
             
         }
     }

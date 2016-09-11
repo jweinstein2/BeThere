@@ -44,6 +44,13 @@ class HomeViewController: UIViewController {
         weekdayPressed(weekButtons[0])
         //TODO: Figure out what the button is for today
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        //let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+        //appDelegate.displayAlert(title: "Error", message: "you had one job and you messed it up
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

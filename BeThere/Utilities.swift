@@ -10,7 +10,7 @@ import Foundation
 
 struct GlobalKeys {
     static let website = "https://still-sea-12039.herokuapp.com"
-    static let dennis = "10.103.231.83:5000"
+    static let dennis = "https://10.103.231.83:5000"
 }
 
 class Utilities {
@@ -35,6 +35,6 @@ class Utilities {
     }
     
     static func getURL() -> String {
-        return GlobalKeys.dennis
+        return GlobalKeys.website
     }
 }
