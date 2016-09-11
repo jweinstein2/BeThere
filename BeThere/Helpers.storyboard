@@ -64,7 +64,7 @@
                                 <rect key="frame" x="20" y="268" width="335" height="120"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-2W-hG4" customClass="BarStatView" customModule="BeThere" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeQ-2W-hG4" customClass="LineStatView" customModule="BeThere" customModuleProvider="target">
                                 <rect key="frame" x="20" y="403" width="335" height="120"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>

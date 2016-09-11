@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EventCell : UITableViewCell {
     
@@ -26,11 +27,11 @@ class HomeViewController: UIViewController {
     var selectedDay = 1
     let user = MainModel.user
     var events : [Event] = MainModel.events
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         streakLabel.text = "\(user.streak)"
         donatedLabel.text = "$\(user.moneyDonated)"
         pointsLabel.text = "\(user.points)"
@@ -48,11 +49,34 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        
+        Alamofire.request(.GET, "\(GlobalKeys.website)/balance")
+            .responseJSON { response in
+                if response.result.isFailure {
+                    print("\(response.result.error!.description)")
+                    return
+                }
+                
+                if let resp = response.response, let jsonArray = (response.result.value) as? NSDictionary {
+                    switch resp.statusCode {
+                    case 200:
+                        let donatedString = jsonArray["donated"] as? String
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.donatedLabel.text = donatedString
+                        }
+                        return
+                    case 400:
+                        return
+                    default:
+                        print("Get status code \(resp.statusCode)")
+                    }
+                }
+        }
         //let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-
+        
         //appDelegate.displayAlert(title: "Error", message: "you had one job and you messed it up
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,7 +104,7 @@ class HomeViewController: UIViewController {
                 button.setImage(UIImage(named: imageName), forState: .Normal)
             }
         }
-
+        
         self.events = Utilities.eventsForDay(selectedDay, events: MainModel.events)
         self.dayEventTable.reloadData()
     }
