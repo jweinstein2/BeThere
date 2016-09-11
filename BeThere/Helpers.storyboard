@@ -293,7 +293,7 @@
         <!--Map View Controller-->
         <scene sceneID="tbg-6X-NcT">
             <objects>
-                <viewController storyboardIdentifier="mapViewController" id="Nof-kD-jXd" customClass="MapViewController" customModule="Yale_History" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewController" id="Nof-kD-jXd" customClass="MapViewController" customModule="BeThere" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ntK-CB-yb2"/>
                         <viewControllerLayoutGuide type="bottom" id="lVC-cX-eNb"/>

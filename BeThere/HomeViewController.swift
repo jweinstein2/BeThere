@@ -40,6 +40,9 @@ class HomeViewController: UIViewController {
         
         //TableViewCustomization
         dayEventTable.tableFooterView = UIView()
+        
+        weekdayPressed(weekButtons[0])
+        //TODO: Figure out what the button is for today
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,17 +51,20 @@ class HomeViewController: UIViewController {
     }
     
     func onEventsUpdated(notification: NSNotification) {
-        events = MainModel.events
-        dayEventTable.reloadData()
+        weekdayPressed(weekButtons[0])
     }
     
     //MARK: Actions
     @IBAction func weekdayPressed(sender: UIButton) {
-        let daysDict = [0 : "monday", 1 : "tuesday", 2 : "wednesday", 3 : "thursday", 4: "friday", 5 : "saturday", 6 : "sunday"]
+        let daysDict = [1 : "monday", 2 : "tuesday", 3 : "wednesday", 4 : "thursday", 5: "friday", 6 : "saturday", 0 : "sunday"]
+        //TODO: Clean up this data structure
+        
+        var selectedDay = NSDate()
         
         for i in 0..<weekButtons.count {
             var button = weekButtons[i]
             if button == sender {
+                selectedDay = NSDate().dateByAddingTimeInterval(NSTimeInterval(86400 * i))
                 let imageName = "\(daysDict[i]!)_color"
                 sender.setImage(UIImage(named: imageName), forState: .Normal)
             } else {
@@ -66,10 +72,10 @@ class HomeViewController: UIViewController {
                 button.setImage(UIImage(named: imageName), forState: .Normal)
             }
         }
+
+        self.events = Utilities.eventsForDay(selectedDay, events: MainModel.events)
+        self.dayEventTable.reloadData()
     }
-    
-
-
 }
 
 //MARK: TableViewDelegate methods
