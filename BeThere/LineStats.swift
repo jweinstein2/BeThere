@@ -26,8 +26,8 @@ class LineStatView: LineChartView {
         var titles = [""]
         var graphData = [0]
         
-        var sum = 0
-        for i in 1...200 {
+        var sum = 10
+        for i in 1...7 {
             titles.append("")
             graphData.append(sum)
             sum += Int(arc4random()) % Int(20 / Int((i / 20) + 1)) + 3
@@ -47,7 +47,7 @@ class LineStatView: LineChartView {
         data?.setDrawValues(false)
         
         //self.leftAxis.drawLimitLinesBehindDataEnabled = true
-        self.leftAxis.enabled = false
+        //self.leftAxis.enabled = false
         self.rightAxis.enabled = false
         //self.xAxis.enabled = false
         self.legend.enabled = false
@@ -59,19 +59,23 @@ class LineStatView: LineChartView {
         self.xAxis.labelPosition = .Bottom
         self.xAxis.labelTextColor = UIColor.whiteColor()
         
+        self.leftAxis.labelTextColor = UIColor.whiteColor()
+        self.leftAxis.labelPosition = .OutsideChart
+        
         //Set axis min
         //self.leftAxis.axisMaxValue = 5.5
         //self.leftAxis.axisMinValue = 0.5
         
         self.highlighter = nil
         
-        
-        
         self.extraLeftOffset = 0
         self.extraRightOffset = 0
         self.extraTopOffset = 5
-        self.extraBottomOffset = 5
-        self.descriptionText = ""
+        self.extraBottomOffset = 0
+        self.descriptionText = "Money donated"
+        self.descriptionTextColor = UIColor.whiteColor()
+        self.descriptionFont = UIFont(name: "Avenir Next", size: 15)!
+        self.descriptionTextAlign = NSTextAlignment.Right
         self.minOffset = 0
         
         
