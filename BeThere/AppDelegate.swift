@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if UIApplication.sharedApplication().applicationState == .Active {
                 NSLog("Refresh in Foreground")
                 let lastLocation = LocationUtil.sharedInstance.lastLocation!
-                Alamofire.request(.POST, "https://still-sea-12039.herokuapp.com/event/\(id)/location?latitude=\(lastLocation.coordinate.latitude)&longitude=\(lastLocation.coordinate.longitude)")
+                Alamofire.request(.POST, "\(Utilities.getURL())/event/\(id)/location?latitude=\(lastLocation.coordinate.latitude)&longitude=\(lastLocation.coordinate.longitude)")
                     .responseString() { string in
                         NSLog("RESPONSE : \(string.description)")
                         if string.description.containsString("true") {

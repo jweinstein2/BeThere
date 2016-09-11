@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct GlobalKeys {
+    static let website = "https://still-sea-12039.herokuapp.com"
+    static let dennis = "10.103.231.83:5000"
+}
+
 class Utilities {
     static func eventsForDay(date: NSDate = NSDate(), events: [Event] = MainModel.events) -> [Event]{
         var returnedEvents : [Event] = []
@@ -27,5 +32,9 @@ class Utilities {
             }
         }
         return returnedEvents
+    }
+    
+    static func getURL() -> String {
+        return GlobalKeys.dennis
     }
 }

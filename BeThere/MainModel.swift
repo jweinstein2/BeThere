@@ -34,7 +34,7 @@ class MainModel {
     
     //TODO: Switch to async request call on login
     class func loadEvents() {
-        Alamofire.request(.GET, "https://still-sea-12039.herokuapp.com/events")
+        Alamofire.request(.GET, "\(Utilities.getURL())/events")
             .responseJSON { response in
                 if response.result.isFailure {
                     print("\(response.result.error!.description)")
