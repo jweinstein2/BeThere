@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (aps["content-available"] as? NSString)?.integerValue == 1 {
             NSLog("silent refreshing in background")
             
-            LocationUtil.sharedInstance.locationManager.requestLocation()
+            LocationUtil.sharedInstance.locationManager.startUpdatingLocation()
             
             //LocationUtil.sharedInstance.uploadNextLocation(){
             LocationUtil.sharedInstance.backgroundFunction = {

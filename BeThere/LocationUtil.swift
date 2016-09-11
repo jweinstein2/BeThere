@@ -13,16 +13,16 @@ import UIKit
 class LocationUtil: NSObject, CLLocationManagerDelegate {
     static let sharedInstance = LocationUtil()
     
-    var backgroundFunction : (() -> ()) = {}
+    var lastLocation : CLLocation?
+    var backgroundFunction : (() -> ())?
     var locationManager = CLLocationManager()
     
     func setup() {
         handleLocationPermissions()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        if Float(UIDevice.currentDevice().systemVersion) >= 9 {
-            locationManager.allowsBackgroundLocationUpdates = true
-        }
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.allowsBackgroundLocationUpdates = true
     }
     
     private func handleLocationPermissions(){
@@ -42,13 +42,16 @@ class LocationUtil: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lastLocation = locations.first
+        
         NSLog("did update locations")
-        if UIApplication.sharedApplication().applicationState == .Background {
+        if (backgroundFunction != nil) {
             //Location updated in background make a server call
-            backgroundFunction()
+            backgroundFunction!()
+            backgroundFunction = nil
             NSLog("SERVER CALL")
         } else {
-            
+            //Normal location update
         }
     }
     

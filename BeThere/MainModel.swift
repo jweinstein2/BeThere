@@ -14,8 +14,7 @@ class MainModel {
     static var user : User = MainModel.getUserInfo()
     static var events : [Event] = [] {
         didSet{
-            NSLog("Event list changed n=\(events.count)")
-            //Notification on changed
+            NSNotificationCenter.defaultCenter().postNotificationName("eventsUpdated", object: nil)
         }
     }
     
@@ -29,23 +28,40 @@ class MainModel {
         user.streak = 12
         user.daysOnTime = 29
         user.daysLate = 3
-        events = getEvents()
+        loadEvents()
         return user
     }
     
     //TODO: Switch to async request call on login
-    class func getEvents() -> [Event] {
-        Alamofire.request(.GET, "https://")
+    class func loadEvents() {
+        Alamofire.request(.GET, "https://still-sea-12039.herokuapp.com/events")
             .responseJSON { response in
                 if response.result.isFailure {
                     print("\(response.result.error!.description)")
                     return
                 }
                 
-                if let resp = response.response, let json = (response.result.value) as? NSDictionary {
-                    NSLog(String(json))
+                if let resp = response.response, let jsonArray = (response.result.value) as? [NSDictionary] {
+                    NSLog(String(jsonArray))
                     switch resp.statusCode {
                     case 200:
+                        for event in jsonArray {
+                            let id = event["id"] as! String
+                            let name = event["name"] as! String
+                            let recurringEventColor = event["recurring_event_color"] as! Int
+                            let startTime = (event["start_time"] as! String).toDate()
+                            let locationName = event["location_name"] as! String
+                            let locationDict = event["location"] as! NSDictionary
+                            let latitude = locationDict["latitude"] as! Double
+                            let longitude = locationDict["longitude"] as! Double
+                            let location = CLLocation(latitude: latitude, longitude: longitude)
+                            
+                            let newEvent = Event(id: id, name: name, location: location, locationName: locationName, startDate: startTime!)
+                            newEvent.color = recurringEventColor
+                            
+                            self.events.append(newEvent)
+                            
+                        }
                         
                         return
                     case 400:
@@ -55,9 +71,9 @@ class MainModel {
                     }
                 }
         }
-        let loc  = CLLocation.init(latitude: 42.234, longitude: 102.4812)
-        let event1 = Event(name: "Go to Bed", location: loc, locationName: "Home", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
-        let event2 = Event(name: "Get To Class", location: loc, locationName: "WLH 140", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
-        return [event1, event2]
+        //let loc  = CLLocation.init(latitude: 42.234, longitude: 102.4812)
+        //let event1 = Event(name: "Go to Bed", location: loc, locationName: "Home", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
+        //let event2 = Event(name: "Get To Class", location: loc, locationName: "WLH 140", repeatData: [.Monday: [NSDate()]], endDate: NSDate())
+        //return [event1, event2]
     }
 }
