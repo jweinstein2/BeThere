@@ -18,4 +18,14 @@ class Utilities {
         }
         return returnedEvents
     }
+    
+    static func eventsWithName(name: String, events: [Event] = MainModel.events) -> [Event]{
+        var returnedEvents : [Event] = []
+        for event in events {
+            if event.name == name {
+                returnedEvents.append(event)
+            }
+        }
+        return returnedEvents
+    }
 }
