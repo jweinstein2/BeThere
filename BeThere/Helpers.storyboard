@@ -185,6 +185,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancel:" destination="Hli-bZ-Kuz" eventType="touchUpInside" id="OPr-gz-wPo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFq-Qa-qPd">
                                 <rect key="frame" x="126" y="214" width="123" height="45"/>

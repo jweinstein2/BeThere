@@ -12,8 +12,12 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
     
     @IBOutlet weak var organization: UIPickerView!
     
+    @IBAction func cancel(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     var pickerData: [String] = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
